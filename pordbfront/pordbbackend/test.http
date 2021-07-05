@@ -1,0 +1,12 @@
+POST http://localhost:4000/app/contribute
+Content-Type: application/json
+
+{
+    "companyName":"33Mail",
+    "link":"33mail.com",
+    "reportEmailWebform":"support@33mail.com",
+    "termsOfServiceIpPolicy":"blah blah",
+    "comments":"blah blah"
+
+}
+
