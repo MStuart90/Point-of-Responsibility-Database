@@ -1,0 +1,13 @@
+POST http://localhost:4000/app/contribute
+Content-Type: application/json
+
+
+# {
+#     "companyName":"About.me",
+#     "link":"https://about.me/legal/terms",
+#     "reportEmailWebform":"https://about.me/legal/copyright",
+#     "termsOfServiceIpPolicy":"Submit ticket",
+#     "comments":"If a counter-notice is received by the Designated Agent, About.me may, in its discretion, send a copy of the counter-notice to the original complaining party informing that person that About.me may replace the removed material or cease disabling it in 10 business days. Unless the copyright owner files an action seeking a court order against the content provider accused of committing infringement, the removed material may be replaced or access to it restored in 10 to 14 business days or more after receipt of the counter-notice, at About.me’s discretion."
+
+# }
+
