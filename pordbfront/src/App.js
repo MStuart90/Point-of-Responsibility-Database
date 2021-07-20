@@ -8,7 +8,7 @@ import Search from "../src/Components/Search";
 
 function App() {
   return (
-    <div className="contentWrapper">
+    <div className="wrapper">
     <header className="header">
       <Navbar/>
     </header>
