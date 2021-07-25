@@ -1,6 +1,36 @@
-POST http://localhost:4000/app/contribute
-Content-Type: application/json
+GET http://localhost:4000/app/contribute
+# Content-Type: application/json
 
+
+# {
+#     "companyName":"Yahoo Web Hosting",
+#     "link":"https://smallbusiness.yahoo.com/hosting",
+#     "reportEmailWebform":"https://help.smallbusiness.yahoo.net/s/report-abuse",
+#     "termsOfServiceIpPolicy":"https://smallbusiness.yahoo.com/tos?_anyid=4ee5ad16-037b-452b-80c4-48fee8469069",
+#     "comments":"Requirements for notice: Your name or organization, Your contact email address, What domain name you are reporting, What violation are you reporting (offense list selection), and Please describe the violation including any relevant details or supporting URLs"
+
+# }
+
+{
+    "companyName":"1&1 IONOS",
+    "link":"https://www.ionos.co.uk/",
+    "reportEmailWebform":"abuse@ionos.com; complaints@ionos.co.uk; legal@ionos.com",
+    "termsOfServiceIpPolicy":"https://www.ionos.co.uk/terms-gtc/terms-and-conditions/?linkId=ft.nav.tandc",
+    "comments":"no comment"
+}
+
+# {
+#     "companyName":"Yahoo Web Hosting",
+#     "link":"https://smallbusiness.yahoo.com/hosting",
+#     "reportEmailWebform":"https://help.smallbusiness.yahoo.net/s/report-abuse",
+#     "termsOfServiceIpPolicy":"https://smallbusiness.yahoo.com/tos?_anyid=4ee5ad16-037b-452b-80c4-48fee8469069",
+#     "comments":"Requirements for Notice -Your name or organization
+# -Your contact email address
+# -What domain name you are reporting?
+# -What violation are you reporting? (offense list selection)
+# -Please describe the violation including any relevant details or supporting URLs"
+
+# }
 
 # {
 #     "companyName":"About.me",
@@ -8,6 +38,4 @@ Content-Type: application/json
 #     "reportEmailWebform":"https://about.me/legal/copyright",
 #     "termsOfServiceIpPolicy":"Submit ticket",
 #     "comments":"If a counter-notice is received by the Designated Agent, About.me may, in its discretion, send a copy of the counter-notice to the original complaining party informing that person that About.me may replace the removed material or cease disabling it in 10 business days. Unless the copyright owner files an action seeking a court order against the content provider accused of committing infringement, the removed material may be replaced or access to it restored in 10 to 14 business days or more after receipt of the counter-notice, at About.me’s discretion."
-
-# }
 
