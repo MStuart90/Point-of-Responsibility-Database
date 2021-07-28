@@ -8,6 +8,9 @@ const cors = require('cors')
 
 dotenv.config()
 
+components
+mongoose.connect(process.env.DATABASE_ACCESS, () =>console.log("Database conected"))
+=======
 mongoose.connect(process.env.DATABASE_ACCESS, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -24,6 +27,7 @@ mongoose.connect(process.env.DATABASE_ACCESS, {
 //   });
 
 
+main
 app.use(express.json())
 app.use(cors())
 app.use('/app', routesUrls)
