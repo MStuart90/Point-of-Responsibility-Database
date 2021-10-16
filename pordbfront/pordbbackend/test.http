@@ -1,5 +1,5 @@
-GET http://localhost:4000/app/contribute
-# Content-Type: application/json
+POST http://localhost:4000/app/contribute
+Content-Type: application/json
 
 
 # {
@@ -12,12 +12,15 @@ GET http://localhost:4000/app/contribute
 # }
 
 {
-    "companyName":"1&1 IONOS",
-    "link":"https://www.ionos.co.uk/",
-    "reportEmailWebform":"abuse@ionos.com; complaints@ionos.co.uk; legal@ionos.com",
-    "termsOfServiceIpPolicy":"https://www.ionos.co.uk/terms-gtc/terms-and-conditions/?linkId=ft.nav.tandc",
-    "comments":"no comment"
+    "companyName":"Afri Host",
+    "link":"https://www.afrihost.com/",
+    "reportEmailWebform":"support@afrihost.com",
+    "termsOfServiceIpPolicy":"https://www.afrihost.com/site/page/terms_and_conditions",
+    "comments":"n/a"
 }
+
+
+
 
 # {
 #     "companyName":"Yahoo Web Hosting",
