@@ -21,10 +21,10 @@
     
 
 ## Description:
-    An app that makes the task of reporting 
+    An app that makes the task of reporting intellectual property abuse easy.
 
 ## User Story:
-    As a person who want to report
+    As a person who wants to report intellectual property abuse needs to know where to report. This database mades it easy to find points of responsibility.
 
 ## What command should be run to install dependencies?
     npm i
