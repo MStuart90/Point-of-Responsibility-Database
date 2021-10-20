@@ -1,0 +1,25 @@
+a {
+  color: gray;
+}
+
+span {
+  font-weight: 700;
+}
+
+.NavLink {
+  color: gray;
+}
+
+.NavItem {
+  padding: 0 15px 0 15px;
+}
+
+.NavbarBrand {
+  margin-left: 4vw;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
