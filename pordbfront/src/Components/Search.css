@@ -1,0 +1,10 @@
+#searchBtn {
+  border: 1px solid darkslategrey;
+  font-size: 0.8em;
+  padding: 0.8em;
+  border-radius: 0 50px 50px 0;
+  color: lightgrey;
+  background-color: rgb(37, 29, 87);
+  position: absolute;
+  margin-left: -2%;
+}
