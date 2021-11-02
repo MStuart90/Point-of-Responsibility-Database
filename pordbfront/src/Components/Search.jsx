@@ -1,13 +1,23 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import ResultsTable from './ResultsTable.jsx';
 import './Search.css';
 
 export default function Search(props) {
     const [input, setInput] = useState('');
+    const [results, setResults] = useState();
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(input);
+
+        if (input) {
+            axios
+                .request({
+                    method: 'GET',
+                    url: `${process.env.REACT_APP_API_URL}/companies/${input}`
+                })
+                .then((response) => setResults(response.data));
+        }
     }
 
     return (
@@ -26,8 +36,9 @@ export default function Search(props) {
                     </span>
                 </button>
             </form>
-            <br></br>
-            <ResultsTable />
+            <div className='results-table'>
+                {results && <ResultsTable results={results} />}
+            </div>
         </div>
     );
 }
