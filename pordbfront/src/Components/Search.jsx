@@ -1,27 +1,33 @@
-import React from "react";
-import ResultsTable from "./ResultsTable.jsx"
-import "./Search.css";
+import React, { useState } from 'react';
+import ResultsTable from './ResultsTable.jsx';
+import './Search.css';
 
-const Search = (props) => {
-  return (
-    <div className="formBox">
-      <form>
-          <input
-            type="search"
-            name="search"
-            id="search"
-            placeholder="Search company, name or product"
-          />
-        <button id="searchBtn">
-          <span role="img" aria-label="Search">
-            🔍
-          </span>
-        </button>
-      </form>
-      <br></br>
-      <ResultsTable />
-    </div>
-  );
-};
+export default function Search(props) {
+    const [input, setInput] = useState('');
 
-export default Search;
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log(input);
+    }
+
+    return (
+        <div className='formBox'>
+            <form onSubmit={handleSubmit}>
+                <input
+                    type='search'
+                    name='search'
+                    placeholder='Search company, name or product'
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                />
+                <button id='searchBtn'>
+                    <span role='img' aria-label='Search'>
+                        🔍
+                    </span>
+                </button>
+            </form>
+            <br></br>
+            <ResultsTable />
+        </div>
+    );
+}
