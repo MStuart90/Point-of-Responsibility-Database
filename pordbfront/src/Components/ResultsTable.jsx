@@ -7,9 +7,9 @@ const ResultsTable = (props) => {
     console.log(results);
 
     function renderRows() {
-        return results.map((row) => {
+        return results.map((row, index) => {
             return (
-                <tr>
+                <tr key={index}>
                     <td>{row.companyName}</td>
                     <td>{row.date}</td>
                     <td>
