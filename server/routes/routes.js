@@ -32,7 +32,7 @@ router.get('/companies/:companyName', async (request, response) => {
     const { companyName } = request.params;
 
     const template = await companyTemplate.find({
-        companyName: companyName
+        companyName: { $regex: companyName, $options: 'i' }
     });
     response.send(template);
 });
