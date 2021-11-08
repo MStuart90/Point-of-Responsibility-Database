@@ -1,0 +1,10 @@
+.contribute-header {
+    margin-bottom: 2rem;
+}
+
+#contribute-alert {
+    width: 25rem;
+    position: absolute !important;
+    right: 0;
+    top: 4rem;
+}

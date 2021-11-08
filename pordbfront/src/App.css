@@ -1,75 +1,81 @@
 /* HTML TAGS */
 
 main {
-  width: 100%;
+    width: 100%;
 }
 
 h1 {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 h2 {
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 h3 {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 p {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 a {
-  color: darkslategrey;
-  text-decoration: none;
+    color: darkslategrey;
+    text-decoration: none;
 }
 
 input,
 textarea {
-  border: 1px solid darkslategrey;
-  font-size: 0.8em;
-  padding: 0.5em;
-  border-radius: 25px;
-  width: 100%;
-  min-width: 350px;
+    border: 1px solid darkslategrey;
+    font-size: 0.8em;
+    padding: 0.5em;
+    border-radius: 25px;
+    width: 100%;
+    min-width: 350px;
 }
 
 /* CLASSES */
 
 .formBtn {
-  border: 1px solid darkslategrey;
-  font-size: 1em;
-  padding: 0.7em 2em 0.7em 2em;
-  border-radius: 50px;
-  color: lightgrey;
-  background-color: rgb(37, 29, 87);
-  position: relative;
+    border: 1px solid darkslategrey;
+    font-size: 1em;
+    padding: 0.7em 2em 0.7em 2em;
+    border-radius: 50px;
+    color: lightgrey;
+    background-color: rgb(37, 29, 87);
+    position: relative;
+    cursor: pointer;
+}
+
+.formBtn.disabled {
+    background-color: rgb(111, 111, 111);
+    cursor: not-allowed;
 }
 
 .flex {
-  display: flex;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .formBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 300px;
 }
 
 .row {
-  flex-direction: row;
+    flex-direction: row;
 }
 
 .col {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .req {
-  color: red;
+    color: red;
 }

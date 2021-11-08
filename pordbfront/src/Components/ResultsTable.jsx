@@ -1,53 +1,66 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Table } from "reactstrap";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Table } from 'reactstrap';
 
 const ResultsTable = (props) => {
-  let someCase = props.someCase;
+    const { results } = props;
+    console.log(results);
 
-  if (someCase) {
-    return (
-      <Table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </Table>
-    );
-  } else if (someCase === undefined) {
-    return <div>
-      <Link to="Contribute"><p>Contribute To Our Database</p></Link>
-    </div>;
-  } else {
-    return <div>
-      <h3>We Don't Have That Yet</h3>
-      <Link to="Contribute"><p>Contribute To Our Database</p></Link>
-    </div>;
-  }
+    function renderRows() {
+        return results.map((row, index) => {
+            return (
+                <tr key={index}>
+                    <td>{row.companyName}</td>
+                    <td>{row.date}</td>
+                    <td>
+                        <a
+                            href={row.termsOfServiceIpPolicy}
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            {row.link}
+                        </a>
+                    </td>
+                    <td>
+                        <a
+                            href={row.termsOfServiceIpPolicy}
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            {row.termsOfServiceIpPolicy}
+                        </a>
+                    </td>
+                    <td>{row.comments}</td>
+                </tr>
+            );
+        });
+    }
+
+    if (results.length) {
+        return (
+            <Table>
+                <thead>
+                    <tr>
+                        <th style={{ width: '20%' }}>Name</th>
+                        <th style={{ width: '10%' }}>Date Added</th>
+                        <th style={{ width: '20%' }}>How To Report</th>
+                        <th style={{ width: '20%' }}>TOS/Policy</th>
+                        <th style={{ width: '30%' }}>Comments</th>
+                    </tr>
+                </thead>
+                <tbody>{renderRows()}</tbody>
+            </Table>
+        );
+    } else {
+        return (
+            <div>
+                <h3>We Don't Have That Yet</h3>
+                <Link to='Contribute'>
+                    <p>Contribute To Our Database</p>
+                </Link>
+            </div>
+        );
+    }
 };
 
 export default ResultsTable;
